@@ -56,7 +56,7 @@ export default {
     return {
       headers: [],
       hashText: '',
-      iframeUrl: 'https://miren123.gitee.io/colorui-h5/#/',
+      iframeUrl: 'https://miren.lovemi.ren/colorui-h5/h5/#/',
       modeView: 'h5',
       showModeBox: false,
       modeList: [
@@ -96,7 +96,7 @@ export default {
             path = '/pages/component/bar'
         }
 
-        this.iframeUrl = 'https://miren123.gitee.io/colorui-h5/#' + path || ''
+        this.iframeUrl = 'https://miren.lovemi.ren/colorui-h5/h5/#' + path || ''
     },
     getHeadersData() {
       this.headers = this.$page.headers
