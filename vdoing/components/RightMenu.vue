@@ -157,7 +157,7 @@ export default {
     width 17.5vw
     height 34.4vw
     z-index -1
-    background-image: url(https://miren123.gitee.io/colorui-document/img/iPhone13.png);
+    background-image: url(https://miren.lovemi.ren/colorui-document/img/iPhone13.png);
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 48px 13px 25px;
