@@ -2,18 +2,6 @@ const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
 const htmlModules = require('./config/htmlModules.js');
 
 module.exports = {
-  head: [
-    ['script', {}, `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?89dce8e95ce69d56af23886e6add87a9";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    `]
-  ],
-
 //   theme: 'vdoing', // 使用依赖包主题
   theme: require.resolve('../../vdoing'), // 使用本地主题
 
@@ -24,6 +12,15 @@ module.exports = {
     ['link', { rel: 'icon', href: '/img/colorui-logo.png' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: '前端,uniapp,uni,插件市场,color,colorui,color文档,colorui文档,colorui文档' }],
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
+    ['script', {}, `
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?89dce8e95ce69d56af23886e6add87a9";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    `]
   ],
   // 主题配置
   themeConfig: {
