@@ -18,8 +18,8 @@
  * ②注：windowLB 和 windowRB：1.展示区块最大宽高200px*400px。2.请给自定义元素定一个不超过200px*400px的宽高。3.在屏幕宽度小于960px时无论如何都不会显示。
  */
 
-// const fhmView = `<div><p>👀 视觉的诱惑，美丽的邂逅~</p><p>📸 全网微密合集，每一张都值得珍藏~</p><a href="https://zib.lovemi.ren" target="_blank">🎁 点击进入</a> 风华迷开启浪漫之旅~</div>`;
+const fhmView = `<div><p>👀 视觉的诱惑，美丽的邂逅~</p><p>📸 全网微密合集，每一张都值得珍藏~</p><a href="https://lovemi.pw" target="_blank">🎁 点击进入</a> 风华迷开启浪漫之旅~</div>`;
 
 module.exports = {
-//   pageT: fhmView
+  pageT: fhmView
 };
