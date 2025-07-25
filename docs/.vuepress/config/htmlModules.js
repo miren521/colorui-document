@@ -31,7 +31,6 @@ const ArticleTopAd = `
      data-ad-slot="1011918435"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-<script>
   </div>
 </ClientOnly>
 `;
