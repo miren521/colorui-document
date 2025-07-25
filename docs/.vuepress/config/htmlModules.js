@@ -20,10 +20,11 @@
 
 const fhmView = `<div><a href="https://lovemi.pw" target="_blank">🎁 点击进入</a> 全网最全微密圈，开启浪漫之旅~</div>`;
 
-// Google AdSense 广告代码
+// Google AdSense 广告组件
 const ArticleTopAd = `
 <ClientOnly>
-<!-- colorui-文章头部 -->
+  <div class="adsense-ad">
+   <!-- colorui-文章头部 -->
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-3945028740890822"
@@ -31,8 +32,7 @@ const ArticleTopAd = `
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
 <script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+  </div>
 </ClientOnly>
 `;
 
