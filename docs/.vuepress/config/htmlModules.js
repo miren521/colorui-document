@@ -22,8 +22,7 @@ const fhmView = `<div><a href="https://lovemi.pw" target="_blank">🎁 点击进
 
 // Google AdSense 广告代码
 const ArticleTopAd = `
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3945028740890822"
-     crossorigin="anonymous"></script>
+<ClientOnly>
 <!-- colorui-文章头部 -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -34,6 +33,7 @@ const ArticleTopAd = `
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+</ClientOnly>
 `;
 
 // 合并 fhmView + 广告
