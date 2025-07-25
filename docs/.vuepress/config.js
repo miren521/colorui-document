@@ -2,7 +2,7 @@ const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
 const htmlModules = require('./config/htmlModules.js');
 
 module.exports = {
-//   theme: 'vdoing', // 使用依赖包主题
+  //   theme: 'vdoing', // 使用依赖包主题
   theme: require.resolve('../../vdoing'), // 使用本地主题
 
   title: "ColorUI 使用文档",
@@ -20,13 +20,18 @@ module.exports = {
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();
-    `]
+    `],
+    ['script', {
+      async: true,
+      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+      'data-ad-client': 'pub-3945028740890822'
+    }]
   ],
   // 主题配置
   themeConfig: {
     nav: [
       { text: '文档', link: '/pages/base/' },
-    //   { text: '风华迷', link: 'https://zib.lovemi.ren' },
+      //   { text: '风华迷', link: 'https://zib.lovemi.ren' },
     ],
     sidebarDepth: 1, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/colorui-logo.png', // 导航栏logo
