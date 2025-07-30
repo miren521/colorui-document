@@ -21,11 +21,14 @@ module.exports = {
         s.parentNode.insertBefore(hm, s);
       })();
     `],
-    ['script', {
-      async: true,
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-      'data-ad-client': 'pub-3945028740890822'
-    }]
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3945028740890822',
+        crossorigin: 'anonymous'
+      }
+    ]
   ],
   // 主题配置
   themeConfig: {
