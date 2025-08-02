@@ -23,6 +23,14 @@ module.exports = {
     `],
     [
       'script',
+      {},
+      `
+        window.google_analytics_domain_name = 'google.com';
+        window.adsbygoogle_domain_name = 'google.com';
+      `
+    ],
+    [
+      'script',
       {
         async: true,
         src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3945028740890822',
