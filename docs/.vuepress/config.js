@@ -88,6 +88,13 @@ module.exports = {
 
   // 插件
   plugins: [
+    [
+      'vue-google-adsense',
+      {
+        adClient: 'ca-pub-3945028740890822', // 替换为你的广告客户 ID
+        isNonPersonalizedAds: true, // 可选：是否显示非个性化广告
+      },
+    ],
     ['fulltext-search'], // 全文搜索
 
     // [
