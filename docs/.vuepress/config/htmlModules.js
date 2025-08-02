@@ -23,10 +23,10 @@ const fhmView = `<div style="margin-bottom: 10px;"><a href="https://lovemi.pw" t
 // Google AdSense 广告组件
 const ArticleTopAd = `
 <ClientOnly>
-  <div class="adsense-ad">
+  <div class="adsense-ad" style="width: 100%; margin: 0 auto;">
    <!-- colorui-文章头部 -->
 <ins class="adsbygoogle"
-     style="display:block;width:100%;height:90px;"
+     style="display:inline-block;width:500px;height:90px"
      data-ad-client="ca-pub-3945028740890822"
      data-ad-slot="1011918435"
      data-ad-format="auto"
