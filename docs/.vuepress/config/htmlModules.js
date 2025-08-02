@@ -18,7 +18,7 @@
  * ②注：windowLB 和 windowRB：1.展示区块最大宽高200px*400px。2.请给自定义元素定一个不超过200px*400px的宽高。3.在屏幕宽度小于960px时无论如何都不会显示。
  */
 
-const fhmView = `<div><a href="https://lovemi.pw" target="_blank">🎁 点击进入</a> 全网最全微密圈，开启浪漫之旅~</div>`;
+const fhmView = `<div style="margin-bottom: 10px;"><a href="https://lovemi.pw" target="_blank">🎁 点击进入</a> 全网最全微密圈，开启浪漫之旅~</div>`;
 
 // Google AdSense 广告组件
 const ArticleTopAd = `
@@ -26,7 +26,7 @@ const ArticleTopAd = `
   <div class="adsense-ad">
    <!-- colorui-文章头部 -->
 <ins class="adsbygoogle"
-     style="display:block"
+     style="display:block;width:100%;height:90px;"
      data-ad-client="ca-pub-3945028740890822"
      data-ad-slot="1011918435"
      data-ad-format="auto"
