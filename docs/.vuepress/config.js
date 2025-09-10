@@ -42,6 +42,7 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: '文档', link: '/pages/base/' },
+      { text: 'ColorUI-MI', link: '/pages/mi-ui/base/' },
       //   { text: '风华迷', link: 'https://zib.lovemi.ren' },
     ],
     sidebarDepth: 1, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
