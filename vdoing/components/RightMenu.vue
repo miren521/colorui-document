@@ -1,48 +1,29 @@
 <template>
   <div class="right-menu-wrapper">
-    <div
-      title="切换视图"
-      class="views-switch button blur theme-mode-but iconfont icon-yuedu"
-      @mouseenter="showModeBox = true"
-      @mouseleave="showModeBox = false"
-      @click="showModeBox = true"
-    >
+    <div title="切换视图" class="views-switch button blur theme-mode-but iconfont icon-yuedu"
+      @mouseenter="showModeBox = true" @mouseleave="showModeBox = false" @click="showModeBox = true">
       <transition name="mode">
-        <ul
-          class="select-box"
-          ref="modeBox"
-          v-show="showModeBox"
-          @click.stop
-          @touchstart.stop
-        >
-          <li
-            v-for="item in modeList"
-            :key="item.KEY"
-            class="iconfont"
-            :class="[item.icon, { active: item.KEY === modeView }]"
-            @click="toggleMode(item.KEY)"
-          >
+        <ul class="select-box" ref="modeBox" v-show="showModeBox" @click.stop @touchstart.stop>
+          <li v-for="item in modeList" :key="item.KEY" class="iconfont"
+            :class="[item.icon, { active: item.KEY === modeView }]" @click="toggleMode(item.KEY)">
             {{ item.name }}
           </li>
         </ul>
       </transition>
     </div>
 
-    <div class="docs-box" v-show="modeView === 'h5' " >
-        <iframe :src="iframeUrl" frameborder="0" scrolling="auto" ref="iframeId"></iframe>
+    <div class="docs-box" v-show="modeView === 'h5'">
+      <iframe :src="iframeUrl" frameborder="0" scrolling="auto" ref="iframeId"
+        style="width:100%; height:100%; border:none; overflow:hidden;"></iframe>
     </div>
-    <div class="right-menu-margin" v-show="modeView === 'mu' ">
+    <div class="right-menu-margin" v-show="modeView === 'mu'">
       <div class="right-menu-title">目录</div>
       <div class="right-menu-content">
-        <div
-          :class="[
-            'right-menu-item',
-            'level' + item.level,
-            { active: item.slug === hashText }
-          ]"
-          v-for="(item, i) in headers"
-          :key="i"
-        >
+        <div :class="[
+          'right-menu-item',
+          'level' + item.level,
+          { active: item.slug === hashText }
+        ]" v-for="(item, i) in headers" :key="i">
           <a :href="'#' + item.slug">{{ item.title }}</a>
         </div>
       </div>
@@ -56,7 +37,7 @@ export default {
     return {
       headers: [],
       hashText: '',
-      iframeUrl: 'https://miren.lovemi.ren/colorui-h5/h5/#/',
+      iframeUrl: 'https://miren.lovemi.ren/mi-ui/#/',
       modeView: 'h5',
       showModeBox: false,
       modeList: [
@@ -86,17 +67,31 @@ export default {
     },
   },
   methods: {
-    toggleMode (key) {
+    toggleMode(key) {
       this.modeView = key
     },
     getIframeUrl() {
-        let path = this.$page.path.indexOf('base') > -1 ? '/' : this.$page.path
+      let path = this.$page.path.indexOf('base') > -1 ? '/' : this.$page.path
 
-        if (path.indexOf('/component/bar') > -1) {
-            path = '/pages/component/bar'
+      // 用原始路径判断，避免 base 替换后丢失 /pages/mi/ 前缀
+      if (this.$page.path.indexOf('/pages/mi/') > -1) {
+        // 仅当路径包含 /examples/ 时才拼接，否则返回空字符串
+        if (this.$page.path.indexOf('/examples/') === -1) {
+          this.iframeUrl = 'http://localhost:5173/mi-ui/#/'
+          return
         }
+        // 过滤掉 /pages/mi/ 前缀
+        const miPath = this.$page.path.replace('/pages/mi/', '')
+        // this.iframeUrl = 'https://miren.lovemi.ren/mi-ui/#/' + miPath
+        this.iframeUrl = 'http://localhost:5173/mi-ui/#/' + miPath
+        return
+      }
 
-        this.iframeUrl = 'https://miren.lovemi.ren/colorui-h5/h5/#' + path || ''
+      if (path.indexOf('/component/bar') > -1) {
+        path = '/pages/component/bar'
+      }
+
+      this.iframeUrl = 'https://miren.lovemi.ren/colorui-h5/h5/#' + path || ''
     },
     getHeadersData() {
       this.headers = this.$page.headers
@@ -154,8 +149,8 @@ export default {
     position fixed
     top calc(var(--navbar-height) + 50px)
     right 6.8vw
-    width 17.5vw
-    height 34.4vw
+    width 19.5vw
+    height 38vw
     z-index -1
     background-image: url(https://miren.lovemi.ren/colorui-document/img/iPhone13.png);
     background-repeat: no-repeat;
@@ -164,7 +159,7 @@ export default {
     iframe 
         display block
         width 100%
-        height 33.9vw
+        height 37.5vw
         border-radius: 10px 10px 20px 20px
         
 .theme-style-line

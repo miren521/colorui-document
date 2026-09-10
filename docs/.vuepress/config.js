@@ -5,11 +5,11 @@ module.exports = {
   //   theme: 'vdoing', // 使用依赖包主题
   theme: require.resolve('../../vdoing'), // 使用本地主题
 
-  title: "ColorUI 使用文档",
-  description: 'ColorUI 使用文档',
-  base: '/colorui-document/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
+  title: "MiniUI 使用文档",
+  description: 'MiniUI 使用文档',
+  base: '/mini-ui-document/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
   head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
-    ['link', { rel: 'icon', href: '/img/colorui-logo.png' }], //favicons，资源放在public文件夹
+    ['link', { rel: 'icon', href: '/img/logo-un-bg.png' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: '前端,uniapp,uni,插件市场,color,colorui,color文档,colorui文档,colorui文档' }],
     ['meta', { name: 'theme-color', content: '#11a8cd' }], // 移动浏览器主题颜色
     ['script', {}, `
@@ -41,7 +41,8 @@ module.exports = {
   // 主题配置
   themeConfig: {
     nav: [
-      { text: '文档', link: '/pages/base/' },
+      { text: 'MiniUI文档', link: '/pages/mi/base/' },
+      { text: 'ColorUI文档', link: '/pages/base/' },
       //   { text: '风华迷', link: 'https://zib.lovemi.ren' },
     ],
     sidebarDepth: 1, // 侧边栏显示深度，默认1，最大2（显示到h3标题）

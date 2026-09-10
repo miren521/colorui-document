@@ -4,7 +4,7 @@ export default ({ router }) => {
   if (typeof window !== 'undefined') {
     router.afterEach(() => {
       if (window.adsbygoogle) {
-        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        // (window.adsbygoogle = window.adsbygoogle || []).push({});
       }
     });
   }
