@@ -77,13 +77,13 @@ export default {
       if (this.$page.path.indexOf('/pages/mi/') > -1) {
         // 仅当路径包含 /examples/ 时才拼接，否则返回空字符串
         if (this.$page.path.indexOf('/examples/') === -1) {
-          this.iframeUrl = 'http://localhost:5173/mi-ui/#/'
+          this.iframeUrl = 'https://miren.lovemi.ren/mi-ui/#/'
           return
         }
         // 过滤掉 /pages/mi/ 前缀
         const miPath = this.$page.path.replace('/pages/mi/', '')
-        // this.iframeUrl = 'https://miren.lovemi.ren/mi-ui/#/' + miPath
-        this.iframeUrl = 'http://localhost:5173/mi-ui/#/' + miPath
+        this.iframeUrl = 'https://miren.lovemi.ren/mi-ui/#/' + miPath
+        // this.iframeUrl = 'http://localhost:5173/mi-ui/#/' + miPath
         return
       }
 
